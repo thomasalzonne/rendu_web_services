@@ -108,8 +108,7 @@ export class MatchService {
       .catch(handleDocumentNotFound);
   }
 
-  // @Cron('30 3 * * 1,3,5')
-  @Cron('30 50 12 * * 1,3,4,5')
+  @Cron('30 3 * * 1,3,5')
   //call Football Data Pull
   async callFDP(): Promise<ParsedMatch[]> {
     const matches = await this.getMatchs(
