@@ -42,7 +42,7 @@ describe('MatchService', () => {
               homeTeamName: 'Equipe 1',
               awayTeamName: 'Equipe 2',
               homeTeamScore: 1,
-              awayTeamScore: 2,
+              awayTeamScore: 2, 
             },
             {
               id: '',
