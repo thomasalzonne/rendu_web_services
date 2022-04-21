@@ -287,7 +287,7 @@ describe('Matchs', () => {
              }
               done();
         })
-        });
+        }, 50000);
     });
 
   describe('DELETE /matchs', () => {

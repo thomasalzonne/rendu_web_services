@@ -120,7 +120,7 @@ describe('MatchService', () => {
           expect(matchs.length).toBeGreaterThanOrEqual(1);
           done();
         })
-    });
+    }, 50000);
     it('should parse valid matchs', (done) => {
       const result = service.callFDP();
       result
@@ -140,19 +140,19 @@ describe('MatchService', () => {
             )
             done();
         });
-    });
+    }, 50000);
 
     it('should verify valid date', () => {
       const result = service.parseDate('Mardi 03 août 2021', '21:00');
       expect(result).toBeTruthy();
       expect(result.length).toBeGreaterThan(1);
-    });
+    }, 50000);
 
     it('should use pushInDb', () => {
       const result = service.callFDP();
       result.then( matchs => {
         expect(service.pushInDb(matchs)).toHaveBeenCalled()
       })
-    })
+    }, 50000)
   });
 });
